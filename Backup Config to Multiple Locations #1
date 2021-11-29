@@ -1,0 +1,11 @@
+$Repo = Get-VBRBackupRepository -Name 'NAKE OF REPO 1 Cloud or local'
+
+$Repo1 = Get-VBRBackupRepository -Name 'NAME OF REPO 2 cloud or local'
+
+Set-VBRConfigurationBackupJob -Repository $Repo
+Start-VBRConfigurationBackupJob
+$lastresult=Get-VBRConfigurationBackupJob
+
+Set-VBRConfigurationBackupJob -Repository $Repo1
+Start-VBRConfigurationBackupJob
+$lastresult1=Get-VBRConfigurationBackupJob
